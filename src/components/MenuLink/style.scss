@@ -1,0 +1,20 @@
+@use "/src/styles/global.scss" as *;
+
+@mixin menu-link {
+
+	padding: 8px 20px;
+	color: $dark-01;
+	border-radius: 20px;
+
+	&:hover {
+		background: $grey-01;
+	}
+}
+
+.menu-link-text {
+	@include menu-link;
+
+	font-size: $font-18px;
+	font-weight: $font-medium;
+	list-style-type: none;
+}

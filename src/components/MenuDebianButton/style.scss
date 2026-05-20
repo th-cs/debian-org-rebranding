@@ -1,0 +1,18 @@
+@use "/src/styles/global.scss" as *;
+
+.menu-debian-button {
+	display: flex;
+	align-items: center;
+	padding: 10px 18px;
+	gap: 12px;
+	color: $white;
+	background: linear-gradient(135deg, $red-02, $red-03);
+	box-shadow: 0 0 8px $red-01;
+	border-radius: 20px;
+	font-size: $font-18px;
+	font-weight: $font-bold;
+
+	&:hover {
+		filter: brightness(110%);
+	}
+}

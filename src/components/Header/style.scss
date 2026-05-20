@@ -1,0 +1,26 @@
+@use "/src/styles/global.scss" as *;
+@use "/src/components/MenuLink/style.scss" as MenuLink;
+
+header {
+	display: flex;
+	justify-content: space-between;
+	padding: 8px 60px;
+	position: sticky;
+	top: 0;
+	background-color: $white;
+
+	.menu-options {
+		display: flex;
+		align-items: center;
+		gap: 40px;
+
+		.menu-globe-icon {
+			@include MenuLink.menu-link;
+		}
+	}
+
+	ul {
+		display: flex;
+		gap: 40px;
+	}
+}
