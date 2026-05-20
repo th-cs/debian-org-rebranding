@@ -1,0 +1,58 @@
+@use "/src/styles/global.scss" as *;
+
+.hero-section {
+	display: flex;
+	flex-direction: column;
+
+	> p {
+		align-self: flex-end;
+		padding: 16px 40px;
+		color: $dark-01;
+		font-size: $font-16px;
+		font-weight: $font-semi-bold;
+		font-style: italic;
+	}
+}
+
+.hero-image {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	height: 680px;
+	background-image: url("/src/assets/images/NASA_ISS-Moon-01.jpg");
+	background-position: center;
+	background-size: cover;
+	background-attachment: fixed;
+	animation: loop 25s infinite;
+
+	@keyframes loop {
+		0% {
+			background-image: url("/src/assets/images/NASA_ISS-Moon-01.jpg");
+		}
+		20%{
+			background-image: url("/src/assets/images/NASA_ISS-Aurora.jpg");
+		}
+		40% {
+			background-image: url("/src/assets/images/NASA_ISS-Hurricane.jpg");
+		}
+		60% {
+			background-image: url("/src/assets/images/NASA_ISS-Moon-02.jpg");
+		}
+		80% {
+			background-image: url("/src/assets/images/NASE_ISS-Mediterranean-Sea.jpg");
+		}
+	}
+
+	h1 {
+		color: $white;
+		font-size: $font-48px;
+		font-weight: $font-extra-bold;
+	}
+
+	p {
+		color: $white;
+		font-size: $font-32px;
+		font-weight: $font-light;
+	}
+}

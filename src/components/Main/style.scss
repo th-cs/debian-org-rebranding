@@ -1,0 +1,6 @@
+@use "/src/styles/global.scss" as *;
+
+main {
+	display: flex;
+	flex-direction: column;
+}
