@@ -2,25 +2,35 @@
 @use "/src/components/MenuLink/style.scss" as MenuLink;
 
 header {
-	display: flex;
-	justify-content: space-between;
-	padding: 8px 60px;
-	position: sticky;
-	top: 0;
-	background-color: $white;
+	padding: 20px $horizontal-padding;
+	position: fixed;
+	width: 100%;
+	z-index: 1;
+
+	.header-menu {
+		display: flex;
+		justify-content: space-between;
+		padding: 8px 60px;
+		position: sticky;
+		top: 0;
+		background-color: $white;
+		border-radius: 40px;
+	}
 
 	.menu-options {
 		display: flex;
 		align-items: center;
-		gap: 40px;
+		gap: 26px;
 
 		.menu-globe-icon {
 			@include MenuLink.menu-link;
+
+			display: flex;
 		}
 	}
 
 	ul {
 		display: flex;
-		gap: 40px;
+		gap: 26px;
 	}
 }

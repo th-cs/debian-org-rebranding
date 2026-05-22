@@ -7,25 +7,27 @@ import globeIcon from "/src/assets/icons/globe-icon.svg";
 function Header() {
 	return (
 		<header>
-			<button type="button">
-				<img
-					src={debianLogo}
-					alt="Ícone da logo do Debian"/>
-			</button>
-			<div className="menu-options">
-				<button type="button" className="menu-globe-icon">
+			<div className="header-menu">
+				<button type="button">
 					<img
-						src={globeIcon}
-						alt="Ícone de um globo"/>
+						src={debianLogo}
+						alt="Ícone da logo do Debian"/>
 				</button>
-				<nav>
-					<ul>
-						<MenuLink label="Blog"/>
-						<MenuLink label="Notícias"/>
-						<MenuLink label="Wiki"/>
-					</ul>
-				</nav>
-				<MenuDebianButton label="Obter o Debian"/>
+				<div className="menu-options">
+					<button type="button" className="menu-globe-icon">
+						<img
+							src={globeIcon}
+							alt="Ícone de um globo"/>
+					</button>
+					<nav>
+						<ul>
+							<MenuLink label="Blog"/>
+							<MenuLink label="Notícias"/>
+							<MenuLink label="Wiki"/>
+						</ul>
+					</nav>
+					<MenuDebianButton label="Obter o Debian"/>
+				</div>
 			</div>
 		</header>
 	);
