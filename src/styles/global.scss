@@ -29,6 +29,7 @@ $font-extra-bold: 800;
 
 $font-16px: 1rem;
 $font-18px: 1.125rem;
+$font-24px: 1.5rem;
 $font-32px: 2rem;
 $font-48px: 3rem;
 
@@ -41,6 +42,7 @@ h1,
 h2,
 p,
 li,
+a,
 button {
 	font-family: $font-urbanist;
 }

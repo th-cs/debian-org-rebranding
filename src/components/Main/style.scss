@@ -18,3 +18,65 @@ main {
 		font-size: $font-32px;
 	}
 }
+
+.about-debian-wrapper {
+	display: flex;
+	justify-content: space-between;
+	padding: 10px $horizontal-padding;
+	width: 100%;
+	gap: 32px;
+}
+
+.about-debian-get {
+
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: space-between;
+	padding: 22px 40px;
+	height: 400px;
+	background: linear-gradient(45deg, #47C2E4, #27787E);
+	border-radius: 20px;
+
+	.get-debian {
+		display: flex;
+		flex-direction: column;
+		gap: 12px;
+
+		.get-debian-button {
+			display: flex;
+			align-items: center;
+			padding: 8px 16px;
+			gap: 12px;
+			color: #47C2E4;
+			font-size: $font-24px;
+			font-weight: $font-semi-bold;
+			background-color: $white;
+			border-radius: 28px;
+			transition: box-shadow 0.2s;
+
+			&:hover {
+				box-shadow: 0 0 8px $white;
+			}
+		}
+
+		p {
+			color: $white;
+			font-size: $font-18px;
+			text-align: center;
+		}
+	}
+
+	.get-debian-links {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		gap: 8px;
+
+		a {
+			color: $white;
+			font-size: $font-18px;
+			text-decoration: underline;
+		}
+	}
+}
