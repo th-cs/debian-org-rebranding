@@ -1,48 +1,16 @@
 @use "/src/styles/global.scss" as *;
 
-.hero-section {
-	display: flex;
-	flex-direction: column;
-
-	> p {
-		align-self: flex-end;
-		padding: 16px 40px;
-		color: $dark-01;
-		font-size: $font-16px;
-		font-weight: $font-semi-bold;
-		font-style: italic;
-	}
-}
-
-.hero-image {
+@mixin hero-image($bg-image) {
 	display: flex;
 	flex-direction: column;
 	align-items: center;
 	justify-content: center;
-	height: 680px;
-	background-image: url("/src/assets/images/NASA_ISS-Moon-01.jpg");
+	width: 100%;
+	height: 800px;
+	background-image: url($bg-image);
 	background-position: center;
 	background-size: cover;
 	background-attachment: fixed;
-	animation: loop 25s infinite;
-
-	@keyframes loop {
-		0% {
-			background-image: url("/src/assets/images/NASA_ISS-Moon-01.jpg");
-		}
-		20%{
-			background-image: url("/src/assets/images/NASA_ISS-Aurora.jpg");
-		}
-		40% {
-			background-image: url("/src/assets/images/NASA_ISS-Hurricane.jpg");
-		}
-		60% {
-			background-image: url("/src/assets/images/NASA_ISS-Moon-02.jpg");
-		}
-		80% {
-			background-image: url("/src/assets/images/NASE_ISS-Mediterranean-Sea.jpg");
-		}
-	}
 
 	h1 {
 		color: $white;
@@ -55,4 +23,70 @@
 		font-size: $font-32px;
 		font-weight: $font-light;
 	}
+}
+
+@mixin hero-image-loop($loop, $value1, $value2, $value3, $value4) {
+	position: absolute;
+	opacity: 0;
+	animation: $loop 15s infinite;
+
+	@keyframes #{$loop} {
+		0% {
+			opacity: 0;
+		}
+		#{$value1} {
+			opacity: 0;
+		}
+		#{$value2} {
+			opacity: 1;
+		}
+		#{$value3} {
+			opacity: 1;
+		}
+		#{$value4} {
+			opacity: 0;
+		}
+	}
+}
+
+.hero-section {
+	display: flex;
+	flex-direction: column;
+
+	> p {
+		align-self: flex-end;
+		padding: 10px $horizontal-padding;
+		color: $dark-01;
+		font-size: $font-16px;
+		font-weight: $font-semi-bold;
+		font-style: italic;
+	}
+}
+
+.hero-image-01 {
+	@include hero-image($bg-image: "/src/assets/images/NASA_ISS-Moon-01.jpg");
+}
+
+.hero-image-02 {
+	@include hero-image($bg-image: "/src/assets/images/NASA_ISS-Aurora.jpg");
+	@include hero-image-loop($loop: loop-02,
+		$value1: 15%, $value2: 20%, $value3: 40%, $value4: 50%);
+}
+
+.hero-image-03 {
+	@include hero-image($bg-image: "/src/assets/images/NASA_ISS-Hurricane.jpg");
+	@include hero-image-loop($loop: loop-03,
+		$value1: 35%, $value2: 40%, $value3: 60%, $value4: 70%);
+}
+
+.hero-image-04 {
+	@include hero-image($bg-image: "/src/assets/images/NASA_ISS-Moon-02.jpg");
+	@include hero-image-loop($loop: loop-04,
+		$value1: 55%, $value2: 60%, $value3: 80%, $value4: 90%);
+}
+
+.hero-image-05 {
+	@include hero-image($bg-image: "/src/assets/images/NASA_ISS-Mediterranean-Sea.jpg");
+	@include hero-image-loop($loop: loop-05,
+		$value1: 75%, $value2: 80%, $value3: 95%, $value4: 100%);
 }
