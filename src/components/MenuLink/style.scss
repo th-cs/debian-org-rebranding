@@ -1,10 +1,10 @@
 @use "/src/styles/global.scss" as *;
 
 @mixin menu-link {
-
 	padding: 8px 20px;
 	color: $dark-01;
 	border-radius: 20px;
+	transition: background 0.2s;
 
 	&:hover {
 		background: $grey-01;
@@ -14,7 +14,7 @@
 .menu-link-text {
 	@include menu-link;
 
-	font-size: $font-18px;
-	font-weight: $font-medium;
+	font-size: $font-16px;
+	font-weight: $font-semi-bold;
 	list-style-type: none;
 }
