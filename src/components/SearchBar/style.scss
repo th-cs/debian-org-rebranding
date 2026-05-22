@@ -1,0 +1,46 @@
+@use "/src/styles/global.scss" as *;
+
+$input-color: #505050;
+
+@mixin input-text {
+	font-family: $font-urbanist;
+	font-size: $font-16px;
+}
+
+.search-bar-wrapper {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	padding: 12px 20px;
+	width: 40%;
+	background-color: $white;
+	border: 1px solid $input-color;
+	border-radius: 28px;
+
+	button {
+		display: flex;
+		padding: 2px;
+		filter: opacity(0.6);
+		transition: filter 0.2s;
+
+		&:hover {
+			filter: opacity(1);
+		}
+	}
+
+	input {
+		@include input-text;
+
+		width: 100%;
+
+		&::placeholder {
+			@include input-text;
+
+			color: $input-color;
+		}
+
+		&:focus {
+			outline: none;
+		}
+	}
+}

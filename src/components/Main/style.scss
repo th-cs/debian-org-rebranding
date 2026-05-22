@@ -4,3 +4,17 @@ main {
 	display: flex;
 	flex-direction: column;
 }
+
+.about-debian {
+
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: 24px;
+	padding-top: 16px;
+
+	h2 {
+		color: $dark-01;
+		font-size: $font-32px;
+	}
+}
